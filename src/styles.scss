@@ -1,0 +1,146 @@
+$backgroundColor: #f6f8f9d9;
+$textBlack: #090A09;
+$textGrey: #6F7A83;
+$textLightGrey: #AEB4B9;
+$badgeGrey: #86A1AE;
+$link: #48DCF8;
+$confirmed: #25CD71;
+$borderBlue: #4486F4;
+$white: #fff;
+$tabBg: #F0F4F6;
+
+
+body{
+    background-color: $backgroundColor;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.no-margin{
+    margin: 0;
+}
+.no-padding {
+    padding: 0;
+}
+
+.container {
+    max-width: 1024px;
+    margin: 50px auto;
+    header {
+        h3 {
+            margin-bottom: 5px; 
+            font-weight: 600;
+        }
+        p {
+        color: $textGrey;
+        font-size: 14px;
+        }
+    }    
+    .groups{
+        margin: 20px 0;
+        .groups-header {
+            border-left: 5px solid $borderBlue;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            padding: 13px;
+            cursor: pointer;
+            background-color: $tabBg;
+            .chevrons {
+                width: 15px;
+                float: right;        
+                position: relative;
+                top: 8px;
+                path {
+                    fill: $textLightGrey;
+                }
+            }
+            .month-title {
+                display: inline-block;
+                font-size: 21px;
+                margin-right: 20px;
+                font-weight: 600;                
+            }
+            .exam-number{    
+                display: inline-block;
+                position: relative;
+                bottom: 5px;
+                font-size: 10px;
+                color: #AEB4B9;
+                border: 1px solid #AEB4B9;
+                border-radius: 10px;
+                padding: 1px 10px;
+                font-weight: 600;
+                text-transform: uppercase;                
+            }
+        }
+        .groups-body{
+            .exam-tile {
+                background-color: $white;
+                border-radius: 5px;
+                box-shadow: 1px 1px 5px #ccc;
+                .exam-dates {
+                    display: inline-block;
+                    font-size: 12px;
+                    margin-right: 10px;
+                    text-transform: uppercase;
+                    color: $textLightGrey;
+    
+                    svg{
+                        width: 10px;
+                        margin-right: 5px;
+                    }
+                }
+                .exam-confirmed {
+                    display: inline-block;
+                    width: 15px;
+                    position: relative;
+                    top: 2px;
+                    path {
+                        fill: $confirmed;
+                    }
+                }
+                .exam-tentative {
+                    display: inline-block;
+                    font-size: 9px;
+                    background-color: $badgeGrey;
+                    color: $white;
+                    border-radius: 10px;
+                    padding: 1px 10px;     
+                    text-transform: uppercase;
+                    position: relative;
+                    top: -2px;       
+                }  
+                .exam-name {
+                    display: inline-block;
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding:10px 0;
+                }          
+                a {
+                    float: right;
+                    font-size: 11px;
+                    text-decoration: none;
+                    color: $link;
+                    position: relative;
+                    top: 15px;
+                    font-weight: 600;
+                }
+            }
+        }            
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);    
+    padding: 20px 0;
+    grid-column-gap: 25px;
+    grid-row-gap: 20px;
+    @media only screen and (max-width: 860px) { grid-template-columns: repeat(2, 1fr); }
+    @media only screen and (max-width: 570px) { grid-template-columns: repeat(1, 1fr); } 
+    
+    .grid-item {                
+        padding: 10px 15px;
+    }
+}
+
